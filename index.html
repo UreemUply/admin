@@ -35,6 +35,7 @@
             padding: 60px 20px 20px;
             position: relative;
         }
+
         .header h1 {
             font-size: 24px;
             font-weight: 700;
@@ -43,6 +44,7 @@
             letter-spacing: -0.5px;
             line-height: 1.3;
         }
+
         .header p {
             font-size: 15px;
             color: #555;
@@ -74,6 +76,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.02);
             text-align: left;
         }
+
         .event-card .badge {
             display: inline-block;
             background-color: var(--uplus-pink);
@@ -84,11 +87,13 @@
             border-radius: 20px;
             margin-bottom: 10px;
         }
+
         .event-card h3 {
             margin: 0 0 8px 0;
             font-size: 18px;
             color: var(--uplus-dark);
         }
+
         .event-card p {
             margin: 0;
             font-size: 14px;
@@ -104,6 +109,7 @@
             margin: 20px auto 0;
             text-align: center;
         }
+
         .info-box p {
             margin: 0;
             font-size: 15px;
@@ -112,8 +118,14 @@
             word-break: keep-all;
         }
 
-        form { padding: 0 20px 20px; }
-        .question { margin-bottom: 28px; }
+        form {
+            padding: 0 20px 20px;
+        }
+
+        .question {
+            margin-bottom: 28px;
+        }
+
         .question h3 {
             font-size: 16px;
             font-weight: 700;
@@ -122,6 +134,7 @@
             line-height: 1.4;
             word-break: keep-all;
         }
+
         .question .desc {
             font-size: 13px;
             color: #888;
@@ -134,6 +147,7 @@
             flex-direction: column;
             gap: 8px;
         }
+
         label {
             display: flex;
             align-items: center;
@@ -146,7 +160,11 @@
             transition: all 0.2s;
             line-height: 1.4;
         }
-        label:hover { border-color: var(--uplus-pink); }
+
+        label:hover {
+            border-color: var(--uplus-pink);
+        }
+
         input[type="radio"], input[type="checkbox"] {
             accent-color: var(--uplus-pink);
             width: 18px;
@@ -154,6 +172,7 @@
             margin-right: 10px;
             flex-shrink: 0;
         }
+
         input[type="text"], input[type="password"] {
             width: 100%;
             padding: 14px 16px;
@@ -163,6 +182,7 @@
             box-sizing: border-box;
             font-family: 'Noto Sans KR', sans-serif;
         }
+
         input[type="text"]:focus, input[type="password"]:focus {
             outline: none;
             border-color: var(--uplus-pink);
@@ -181,25 +201,103 @@
             margin-top: 10px;
             transition: background-color 0.2s;
         }
-        .submit-btn:hover { background-color: #cc006f; }
-        .submit-btn:disabled { background-color: #ccc; cursor: not-allowed; }
-        .btn-secondary { background-color: #555; color: #fff; }
-        .btn-secondary:hover { background-color: #333; }
 
-        .admin-toggle { text-align: center; margin: 30px 0 10px; }
-        .admin-toggle button { background: none; border: none; color: #aaa; cursor: pointer; font-size: 13px; text-decoration: underline; }
+        .submit-btn:hover {
+            background-color: #cc006f;
+        }
 
-        .table-container { overflow-x: auto; margin-top: 15px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-        table { width: 100%; border-collapse: collapse; font-size: 12px; white-space: nowrap; }
-        th, td { border: 1px solid var(--uplus-border); padding: 10px 8px; text-align: center; }
-        th { background-color: var(--uplus-gray); color: var(--uplus-dark); font-weight: 700; position: sticky; top: 0; }
-        tr:nth-child(even) { background-color: #fafafa; }
+        .submit-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
 
-        .admin-controls { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
-        .admin-controls button { padding: 12px; border: none; border-radius: 8px; cursor: pointer; font-size: 14px; font-weight: 500; flex: 1; min-width: 100px; }
-        .btn-back { background-color: #555; color: white; }
-        .btn-download { background-color: #107c41; color: white; }
-        .btn-clear { background-color: #e74c3c; color: white; }
+        .btn-secondary {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .btn-secondary:hover {
+            background-color: #333;
+        }
+
+        .admin-toggle {
+            text-align: center;
+            margin: 30px 0 10px;
+        }
+
+        .admin-toggle button {
+            background: none;
+            border: none;
+            color: #aaa;
+            cursor: pointer;
+            font-size: 13px;
+            text-decoration: underline;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-top: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        th, td {
+            border: 1px solid var(--uplus-border);
+            padding: 10px 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: var(--uplus-gray);
+            color: var(--uplus-dark);
+            font-weight: 700;
+            position: sticky;
+            top: 0;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .admin-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+
+        .admin-controls button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            flex: 1;
+            min-width: 100px;
+        }
+
+        .btn-back {
+            background-color: #555;
+            color: white;
+        }
+
+        .btn-download {
+            background-color: #107c41;
+            color: white;
+        }
+
+        .btn-clear {
+            background-color: #e74c3c;
+            color: white;
+        }
 
         .top-logo {
             text-align: center;
@@ -215,20 +313,6 @@
             font-weight: 700;
             text-align: center;
         }
-
-        .mini-btn {
-            display: inline-block;
-            background-color: var(--uplus-pink);
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 700;
-            padding: 7px 10px;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-        .mini-btn:hover { background-color: #cc006f; }
     </style>
 </head>
 <body>
@@ -417,9 +501,7 @@
                             <th>가족수</th>
                             <th>산단근무(핵심)</th>
                             <th>학원위치(핵심)</th>
-                            <th>접수좌표</th>
-                            <th>주소지</th>
-                            <th>위치확인</th>
+                            <th>접수위치(GPS)</th>
                         </tr>
                     </thead>
                     <tbody id="tableBody"></tbody>
@@ -438,12 +520,17 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-    const SUPABASE_URL = "https://ytnxmnbctujuopbqpurl.supabase.co";
-    const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_4oBm89ecivuVF6StOBz7yg_qNBItC4z";
-    const KAKAO_REST_API_KEY = "031976a908a7025af454fac04bb981c7";
+    // ==============================
+    // Supabase 설정
+    // ==============================
+    const SUPABASE_URL = 'https://ytnxmnbctujuopbqpurl.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_4oBm89ecivuVF6StOBz7yg_qNBItC4z';
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
+    // 저장 테이블명
+    const TABLE_NAME = 'region_event_data';
 
+    // 화면별 ID 모음
     const views = {
         menu: document.getElementById('menuView'),
         surveyView: document.getElementById('surveyView'),
@@ -452,11 +539,12 @@
     };
 
     let selectedRegion = '';
+    let currentAdminRows = [];
 
     function switchView(targetView) {
         Object.values(views).forEach(v => v.style.display = 'none');
         views[targetView].style.display = 'block';
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
     }
 
     function goToMenu() {
@@ -470,7 +558,7 @@
         const cbDiv = document.getElementById('chungbukQuestions');
         const djDiv = document.getElementById('daejeonQuestions');
 
-        if(region === '충북') {
+        if (region === '충북') {
             cbDiv.style.display = 'block';
             djDiv.style.display = 'none';
             cbDiv.querySelectorAll('input').forEach(el => el.disabled = false);
@@ -485,13 +573,7 @@
         switchView('surveyView');
     }
 
-    async function showAdminLogin() {
-        const { data } = await supabaseClient.auth.getSession();
-        if (data.session) {
-            switchView('admin');
-            await loadAdminData();
-            return;
-        }
+    function showAdminLogin() {
         switchView('adminLogin');
     }
 
@@ -499,35 +581,28 @@
         document.getElementById('loginPw').value = '';
         switchView('menu');
     }
-document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault()
 
-    const pw = document.getElementById('loginPw').value
-
-    if(pw === "ureem2012"){
-
-        document.getElementById('loginPw').value = ""
-        switchView('admin')
-        loadAdminData()
-
-    }else{
-        alert("비밀번호가 틀렸습니다.")
-    }
-})
     document.getElementById('loginForm').addEventListener('submit', async function(e) {
         e.preventDefault();
-
-        const pwInput = document.getElementById('loginPw').value.trim();
-        if (!pwInput) {
-            alert('비밀번호를 입력해주세요.');
-            return;
+        const pwInput = document.getElementById('loginPw').value;
+        if (pwInput === 'ureem2012') {
+            document.getElementById('loginPw').value = '';
+            switchView('admin');
+            await loadAdminData();
+        } else {
+            alert('비밀번호가 일치하지 않습니다.');
         }
-
-        document.getElementById('loginPw').value = '';
-        switchView('admin');
-        await loadAdminData();
     });
 
+    function formatKoreanDate(dateValue) {
+        const date = new Date(dateValue);
+        if (isNaN(date.getTime())) return '-';
+        return date.toLocaleString('ko-KR');
+    }
+
+    // ==============================
+    // 폼 제출
+    // ==============================
     document.getElementById('integratedForm').addEventListener('submit', async function(e) {
         e.preventDefault();
 
@@ -535,12 +610,10 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
         submitBtn.disabled = true;
         submitBtn.innerText = "위치 확인 및 접수 중...";
 
-        try {
-            const q5_val = document.querySelector('input[name="q5"]:not([disabled]):checked')?.value || '-';
-            const q6_val = document.querySelector('input[name="q6"]:not([disabled]):checked')?.value || '-';
+        const q5_val = document.querySelector('input[name="q5"]:not([disabled]):checked')?.value || '-';
+        const q6_val = document.querySelector('input[name="q6"]:not([disabled]):checked')?.value || '-';
 
-            const locationStr = await getLocationText();
-
+        const saveData = async (locationStr) => {
             const payload = {
                 region: selectedRegion,
                 q1: document.getElementById('q1').value.trim(),
@@ -549,210 +622,114 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
                 q4: document.querySelector('input[name="q4"]:checked')?.value || '-',
                 q5: q5_val,
                 q6: q6_val,
-                q7: locationStr
+                location: locationStr,
+                created_at: new Date().toISOString()
             };
 
             const { error } = await supabaseClient
-                .from('survey_responses')
+                .from(TABLE_NAME)
                 .insert([payload]);
 
             if (error) {
                 console.error('Supabase insert error:', error);
-                alert('저장 실패: ' + error.message);
+                alert('접수 저장 중 오류가 발생했습니다.\n테이블명 또는 컬럼 구성을 확인해주세요.');
+                submitBtn.disabled = false;
+                submitBtn.innerText = "할인 혜택 확인하기";
                 return;
             }
 
             alert(`[${selectedRegion} 지역] 이벤트 접수가 완료되었습니다! 🎉\n담당 플래너가 혜택을 확인하고 안내해 드리겠습니다.`);
-
             document.getElementById('integratedForm').reset();
-            switchView('menu');
-        } catch (err) {
-            console.error(err);
-            alert('접수 중 오류가 발생했습니다.');
-        } finally {
             submitBtn.disabled = false;
             submitBtn.innerText = "할인 혜택 확인하기";
+            switchView('menu');
+        };
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                async function(position) {
+                    const lat = position.coords.latitude.toFixed(5);
+                    const lng = position.coords.longitude.toFixed(5);
+                    await saveData(`${lat}, ${lng}`);
+                },
+                async function() {
+                    await saveData("위치 확인 불가(권한거부)");
+                },
+                { timeout: 5000 }
+            );
+        } else {
+            await saveData("GPS 지원하지 않음");
         }
     });
 
-    async function getLocationText() {
-        if (!navigator.geolocation) {
-            return "GPS 지원하지 않음";
-        }
-
-        try {
-            const position = await getCurrentPositionPromise();
-            const lat = Number(position.coords.latitude).toFixed(5);
-            const lng = Number(position.coords.longitude).toFixed(5);
-            return `${lat}, ${lng}`;
-        } catch (error) {
-            return "위치 확인 불가(권한거부)";
-        }
-    }
-
-    function getCurrentPositionPromise() {
-        return new Promise((resolve, reject) => {
-            navigator.geolocation.getCurrentPosition(
-                resolve,
-                reject,
-                { timeout: 5000, enableHighAccuracy: true, maximumAge: 0 }
-            );
-        });
-    }
-
+    // ==============================
+    // 관리자 데이터 로드
+    // ==============================
     async function loadAdminData() {
         const tbody = document.getElementById('tableBody');
-        tbody.innerHTML = '<tr><td colspan="11" style="padding:30px; color:#777;">불러오는 중입니다...</td></tr>';
+        tbody.innerHTML = '<tr><td colspan="9" style="padding:30px; color:#777;">데이터를 불러오는 중입니다...</td></tr>';
 
         const { data, error } = await supabaseClient
-            .from('survey_responses')
-            .select('id, created_at, region, q1, q2, q3, q4, q5, q6, q7')
+            .from(TABLE_NAME)
+            .select('*')
             .order('created_at', { ascending: false });
 
         if (error) {
             console.error('Supabase select error:', error);
-            tbody.innerHTML = '<tr><td colspan="11" style="padding:30px; color:#777;">데이터를 불러오지 못했습니다.</td></tr>';
-            alert('관리자 데이터 조회 실패: ' + error.message);
+            tbody.innerHTML = '<tr><td colspan="9" style="padding:30px; color:#e74c3c;">데이터를 불러오지 못했습니다.<br>테이블명 또는 권한(RLS)을 확인해주세요.</td></tr>';
             return;
         }
 
-        if (!data || data.length === 0) {
-            tbody.innerHTML = '<tr><td colspan="11" style="padding:30px; color:#777;">아직 접수된 고객 내역이 없습니다.</td></tr>';
+        currentAdminRows = data || [];
+        tbody.innerHTML = '';
+
+        if (currentAdminRows.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="9" style="padding:30px; color:#777;">아직 접수된 고객 내역이 없습니다.</td></tr>';
             return;
         }
 
-        const rowsHtml = await Promise.all(
-            data.map(async (row) => {
-                const regionBadge = row.region === '충북'
-                    ? `<span style="background:var(--uplus-pink); color:white; padding:3px 8px; border-radius:10px;">충북</span>`
-                    : `<span style="background:#8E44AD; color:white; padding:3px 8px; border-radius:10px;">대전</span>`;
+        currentAdminRows.forEach(row => {
+            const tr = document.createElement('tr');
 
-                const parsed = parseQ7(row.q7);
-                let addressText = '-';
-                let mapButton = '-';
+            const regionBadge = row.region === '충북'
+                ? `<span style="background:var(--uplus-pink); color:white; padding:3px 8px; border-radius:10px;">충북</span>`
+                : `<span style="background:#8E44AD; color:white; padding:3px 8px; border-radius:10px;">대전</span>`;
 
-                if (parsed.valid) {
-                    try {
-                        addressText = await reverseGeocode(parsed.lat, parsed.lng);
-                    } catch (e) {
-                        console.error('주소 변환 오류:', e);
-                        addressText = '주소 변환 실패';
-                    }
-
-                    mapButton = `<button type="button" class="mini-btn" onclick="openMap('${parsed.lng}','${parsed.lat}')">위치확인</button>`;
-                } else {
-                    addressText = row.q7 || '-';
-                }
-
-                return `
-                    <tr>
-                        <td>${regionBadge}</td>
-                        <td style="font-size:11px;">${formatDate(row.created_at)}</td>
-                        <td style="font-weight:bold; color:var(--uplus-pink);">${escapeHtml(row.q1)}</td>
-                        <td>${escapeHtml(row.q2)}</td>
-                        <td>${escapeHtml(row.q3)}</td>
-                        <td>${escapeHtml(row.q4)}</td>
-                        <td style="font-weight:bold;">${escapeHtml(row.q5)}</td>
-                        <td style="font-size:11px; white-space:normal; min-width:120px;">${escapeHtml(row.q6)}</td>
-                        <td style="font-size:11px; white-space:normal; min-width:110px;">${escapeHtml(row.q7 || '-')}</td>
-                        <td style="font-size:11px; white-space:normal; min-width:180px;">${escapeHtml(addressText)}</td>
-                        <td>${mapButton}</td>
-                    </tr>
-                `;
-            })
-        );
-
-        tbody.innerHTML = rowsHtml.join('');
-    }
-async function reverseGeocode(lat, lng){
-
-    const url =
-    `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${GOOGLE_API_KEY}`
-
-    const res = await fetch(url)
-    const data = await res.json()
-
-    if(data.results && data.results.length > 0){
-        return data.results[0].formatted_address
-    }
-
-    return "주소 확인 실패"
-}
-    function parseQ7(value) {
-        if (!value) return { valid: false, lat: '', lng: '' };
-
-        const parts = String(value).split(',').map(v => v.trim());
-        if (parts.length !== 2) return { valid: false, lat: '', lng: '' };
-
-        const first = Number(parts[0]);
-        const second = Number(parts[1]);
-
-        if (Number.isNaN(first) || Number.isNaN(second)) {
-            return { valid: false, lat: '', lng: '' };
-        }
-
-        if (Math.abs(first) <= 90 && Math.abs(second) <= 180) {
-            return { valid: true, lat: String(first), lng: String(second) };
-        }
-
-        if (Math.abs(first) <= 180 && Math.abs(second) <= 90) {
-            return { valid: true, lng: String(first), lat: String(second) };
-        }
-
-        return { valid: false, lat: '', lng: '' };
-    }
-
-    async function reverseGeocode(lng, lat) {
-        const url = `https://dapi.kakao.com/v2/local/geo/coord2address.json?x=${encodeURIComponent(lng)}&y=${encodeURIComponent(lat)}&input_coord=WGS84`;
-
-        const response = await fetch(url, {
-            headers: {
-                Authorization: `KakaoAK ${KAKAO_REST_API_KEY}`
+            let locDisplay = row.location || '-';
+            if (typeof locDisplay === 'string' && locDisplay.includes(',')) {
+                const coords = locDisplay.replace(/ /g, '');
+                locDisplay = `<a href="https://www.google.com/maps/search/?api=1&query=${coords}" target="_blank" style="color:var(--uplus-pink); text-decoration:underline; font-weight:bold;">지도보기</a><br><span style="font-size:10px; color:#888;">(${row.location})</span>`;
             }
+
+            tr.innerHTML = `
+                <td>${regionBadge}</td>
+                <td style="font-size:11px;">${formatKoreanDate(row.created_at)}</td>
+                <td style="font-weight:bold; color:var(--uplus-pink);">${row.q1 || '-'}</td>
+                <td>${row.q2 || '-'}</td>
+                <td>${row.q3 || '-'}</td>
+                <td>${row.q4 || '-'}</td>
+                <td style="font-weight:bold;">${row.q5 || '-'}</td>
+                <td style="font-size:11px; white-space:normal; min-width:120px;">${row.q6 || '-'}</td>
+                <td style="font-size:12px; font-weight:bold;">${locDisplay}</td>
+            `;
+            tbody.appendChild(tr);
         });
-
-        if (!response.ok) {
-            throw new Error('카카오 주소 변환 요청 실패');
-        }
-
-        const json = await response.json();
-        const doc = json.documents && json.documents[0];
-
-        if (!doc) return '주소 없음';
-
-        return (
-            doc.road_address?.address_name ||
-            doc.address?.address_name ||
-            '주소 없음'
-        );
     }
 
-function openMap(lng, lat) {
-    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(lat)},${encodeURIComponent(lng)}`;
-    window.open(url, '_blank');
-    }
-
-    async function downloadCSV() {
-        const { data, error } = await supabaseClient
-            .from('survey_responses')
-            .select('region, created_at, q1, q2, q3, q4, q5, q6, q7')
-            .order('created_at', { ascending: false });
-
-        if (error) {
-            alert('다운로드 실패: ' + error.message);
-            return;
-        }
-
-        if (!data || data.length === 0) {
+    // ==============================
+    // CSV 다운로드
+    // ==============================
+    function downloadCSV() {
+        if (!currentAdminRows.length) {
             alert("다운로드할 데이터가 없습니다.");
             return;
         }
 
         let csvContent = "\uFEFF";
-        csvContent += "지역,접수일시,고객명,현재 모바일,인터넷/TV,가족 수,산단근무여부,학원위치,접수좌표\n";
+        csvContent += "지역,접수일시,고객명,현재 모바일,인터넷/TV,가족 수,산단근무여부,학원위치,접수위치(GPS)\n";
 
-        data.forEach(d => {
-            csvContent += `"${d.region || ''}","${formatDate(d.created_at)}","${csvEscape(d.q1)}","${csvEscape(d.q2)}","${csvEscape(d.q3)}","${csvEscape(d.q4)}","${csvEscape(d.q5)}","${csvEscape(d.q6)}","${csvEscape(d.q7)}"\n`;
+        currentAdminRows.forEach(d => {
+            csvContent += `"${d.region || ''}","${formatKoreanDate(d.created_at)}","${d.q1 || ''}","${d.q2 || ''}","${d.q3 || ''}","${d.q4 || ''}","${d.q5 || ''}","${d.q6 || ''}","${d.location || '-'}"\n`;
         });
 
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
@@ -769,43 +746,27 @@ function openMap(lng, lat) {
         document.body.removeChild(link);
     }
 
+    // ==============================
+    // 전체 데이터 초기화
+    // ==============================
     async function clearData() {
         if (!confirm("정말 모든 접수 내역을 삭제하시겠습니까? (삭제 전 엑셀 저장을 권장합니다)")) {
             return;
         }
 
         const { error } = await supabaseClient
-            .from('survey_responses')
+            .from(TABLE_NAME)
             .delete()
-            .not('id', 'is', null);
+            .neq('id', 0);
 
         if (error) {
-            alert('전체 데이터 초기화 실패: ' + error.message);
+            console.error('Supabase delete error:', error);
+            alert('전체 삭제 중 오류가 발생했습니다.\nRLS 정책 또는 테이블 권한을 확인해주세요.');
             return;
         }
 
         await loadAdminData();
         alert("전체 내역이 초기화 되었습니다.");
-    }
-
-    function formatDate(value) {
-        if (!value) return '-';
-        return new Date(value).toLocaleString('ko-KR');
-    }
-
-    function csvEscape(value) {
-        if (value === null || value === undefined) return '';
-        return String(value).replaceAll('"', '""');
-    }
-
-    function escapeHtml(value) {
-        if (value === null || value === undefined) return '';
-        return String(value)
-            .replaceAll('&', '&amp;')
-            .replaceAll('<', '&lt;')
-            .replaceAll('>', '&gt;')
-            .replaceAll('"', '&quot;')
-            .replaceAll("'", '&#039;');
     }
 </script>
 
