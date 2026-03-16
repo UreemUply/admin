@@ -440,7 +440,6 @@
 <script>
     const SUPABASE_URL = "https://ytnxmnbctujuopbqpurl.supabase.co";
     const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_4oBm89ecivuVF6StOBz7yg_qNBItC4z";
-    const SUPABASE_ADMIN_EMAIL = "ureem@admin.co.kr";
     const KAKAO_REST_API_KEY = "031976a908a7025af454fac04bb981c7";
 
     const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY);
@@ -500,23 +499,27 @@
         document.getElementById('loginPw').value = '';
         switchView('menu');
     }
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault()
 
+    const pw = document.getElementById('loginPw').value
+
+    if(pw === "ureem2012"){
+
+        document.getElementById('loginPw').value = ""
+        switchView('admin')
+        loadAdminData()
+
+    }else{
+        alert("비밀번호가 틀렸습니다.")
+    }
+})
     document.getElementById('loginForm').addEventListener('submit', async function(e) {
         e.preventDefault();
 
         const pwInput = document.getElementById('loginPw').value.trim();
         if (!pwInput) {
             alert('비밀번호를 입력해주세요.');
-            return;
-        }
-
-        const { error } = await supabaseClient.auth.signInWithPassword({
-            email: SUPABASE_ADMIN_EMAIL,
-            password: pwInput
-        });
-
-        if (error) {
-            alert('비밀번호가 일치하지 않거나 로그인에 실패했습니다.');
             return;
         }
 
@@ -630,7 +633,7 @@
 
                 if (parsed.valid) {
                     try {
-                        addressText = await reverseGeocode(parsed.lng, parsed.lat);
+                        addressText = await reverseGeocode(parsed.lat, parsed.lng);
                     } catch (e) {
                         console.error('주소 변환 오류:', e);
                         addressText = '주소 변환 실패';
@@ -661,7 +664,20 @@
 
         tbody.innerHTML = rowsHtml.join('');
     }
+async function reverseGeocode(lat, lng){
 
+    const url =
+    `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${GOOGLE_API_KEY}`
+
+    const res = await fetch(url)
+    const data = await res.json()
+
+    if(data.results && data.results.length > 0){
+        return data.results[0].formatted_address
+    }
+
+    return "주소 확인 실패"
+}
     function parseQ7(value) {
         if (!value) return { valid: false, lat: '', lng: '' };
 
