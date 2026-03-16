@@ -749,22 +749,23 @@
     // ==============================
     // 전체 데이터 초기화
     // ==============================
-    async function clearData()   {
+   async function clearData() {
+
     const pw = prompt("전체 데이터 삭제 비밀번호를 입력하세요");
-if(pw !== "2012ureem"){
-    alert("비밀번호가 올바르지 않습니다.");
-    return;
-}
-    {
-        if (!confirm("정말 모든 접수 내역을 삭제하시겠습니까? (삭제 전 엑셀 저장을 권장합니다)")) {
-            return;
-        }
+    if(pw !== "2012ureem"){
+        alert("비밀번호가 올바르지 않습니다.");
+        return;
+    }
 
-        const { error } = await supabaseClient
-            .from(TABLE_NAME)
-            .delete()
-            .neq('id', 0);
+    if (!confirm("정말 모든 접수 내역을 삭제하시겠습니까? (삭제 전 엑셀 저장을 권장합니다)")) {
+        return;
+    }
 
+    const { error } = await supabaseClient
+        .from(TABLE_NAME)
+        .delete()
+        .neq('id', 0);
+       
         if (error) {
             console.error('Supabase delete error:', error);
             alert('전체 삭제 중 오류가 발생했습니다.\nRLS 정책 또는 테이블 권한을 확인해주세요.');
