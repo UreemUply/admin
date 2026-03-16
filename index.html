@@ -711,9 +711,9 @@
         );
     }
 
-    function openMap(lng, lat) {
-        const url = `https://map.kakao.com/link/map/${encodeURIComponent(lat)},${encodeURIComponent(lng)}`;
-        window.open(url, '_blank');
+function openMap(lng, lat) {
+    const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(lat)},${encodeURIComponent(lng)}`;
+    window.open(url, '_blank');
     }
 
     async function downloadCSV() {
